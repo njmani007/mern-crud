@@ -7,7 +7,7 @@ var multer = require('multer'),
   bodyParser = require('body-parser'),
   path = require('path');
 var mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://njmani007:Njm48419njm@cluster1.4fwx6bk.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true });
 var fs = require('fs');
 var product = require("./model/product.js");
 var user = require("./model/user.js");
